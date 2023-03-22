@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Cunado creamos un formulario-->
+    <form action="procesar.html" method="get">
+    <fieldset>
+        <legend>Controles de formulario</legend><!-- debe estar asociado con una etiqueta-->
+        <!-- title para patrones de usuario-->
+        <label for="usuario">Usuario:</label>
+        <input type="text" 
+        pattern="[A-Z][a-z]{0-5}"
+        title="Ingres un maximo de 5 letras"
+        placeholder="ingrese el texto"
+        required
+        name="usuario"> <!-- esto aparece cuando se pone le mouse encima-->
+        <br>
+        <br>
+        <label for="correo">Correo:</label>
+        <input type="email"
+        size="40"
+        id="correo"
+        name="correo"
+        multiple>
+        <br>
+        <br>
+        <label for="tel">Telefono:</label>
+        <input type=tel"
+        id="tel"
+        name="telefono"
+        required>
+        <br>
+        <br>
+        <label for="fecha">Fecha</label>
+        <input type="date"
+        id="fecha">
+        <br>
+        <br>
+        <!-- seleccionadores-->
+        <label for="joven">Joven</label>
+        <input type="radio"id="joven" name="edad">
+        <label for="adulto">Adulto</label>
+        <input type="radio" id="adulto" name="edad">
+        <label for="tercera">Tercera edad</label>
+        <input type="radio" id="tercera" name="edad">
+        <!--rnagos-->
+        <br>
+        <br>
+        <label for="rango">Rango</label>
+        <input type="range" id="rango" name="ingreso" min =0  max = 5>
+        <br>
+        <br>
+        <label for="terminos">Terminos:</label>
+        <input type="checkbox" name="terminos" id="terminos">
+        <br>
+        <br>
+        <!-- selector -->
+        <select name="pais" id="pais">
+            <option value="co">Colombia</option>
+            <option value="br">Brasi</option>
+            <option value="ca">Canada</option>
+            <option value="ec">Colombia</option>
+        </select>
+        <br>
+        <br>
+        <!--Text area-->
+        <label for="datos">coso</label>
+        <textarea name="datos" id="datos"></textarea>
+        <br>
+        <br>
+
+        <button type="reset">Borrar</button>
+        <button type="reset">Borrar</button>
+        <button type="button" onclick="mostrar()">boton</button>
+        <button type="button" id="boton2">boton2</button>
+    </fieldset>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
